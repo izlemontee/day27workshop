@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter review details</h1>
+    <form method="POST" th:action="@{/review}" th:object="${review}">
+        <input type="text" th:field="*{name}" th:name="name">
+        <input type="number" th:field="*{rating}" th:name="rating">
+        <input type="text" th:field="*{comment}" th:name="comment">
+        <input type="number" th:field="*{gid}" th:name="gid">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
